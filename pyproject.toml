@@ -1,12 +1,19 @@
 [project]
-name = "process-template"
+name = "brugerluk-workforce-planner"
 version = "0.3.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "automation-server-client",
+    "boss-client",
+    "odk-tools",
+    "ruff>=0.15.17",
+    "workforce-planner-client",
 ]
 
 [tool.uv.sources]
 automation-server-client = { git = "https://github.com/odense-rpa/automation-server-client.git", tag = "v0.3.0" }
+boss-client = { git = "https://github.com/odense-rpa/boss-client.git" }
+odk-tools = { git = "https://github.com/odense-rpa/odk-tools.git" }
+workforce-planner-client = { git = "https://github.com/odense-rpa/workforce-planner-client.git" }
