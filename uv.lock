@@ -632,7 +632,7 @@ wheels = [
 [[package]]
 name = "workforce-planner-client"
 version = "0.3.0"
-source = { git = "https://github.com/odense-rpa/workforce-planner-client.git#e2dc367f7f4375b0536bea2ba1c1221b27258bc4" }
+source = { git = "https://github.com/odense-rpa/workforce-planner-client.git#05185c686adb7782c6b39de314e06d9c7fa103ae" }
 dependencies = [
     { name = "authlib" },
     { name = "httpx" },

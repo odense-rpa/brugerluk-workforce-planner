@@ -38,7 +38,13 @@ def process_workqueue(
 
             try:
                 workforce_planner.slet_personressource(data["email"])
-                workforce_planner.deaktiver_bruger(data["email"])
+                
+                try:
+                    workforce_planner.deaktiver_bruger(data["email"])
+                except LookupError:
+                    # Der smides en LookupError hvis brugeren ikke findes i Workforce Planner - men det er ikke et problem, da vi stadig har slettet personressourcen
+                    pass
+
                 boss.marker_bruger_som_slettet(data["id"])
                 tracker.track_task(proces_navn)
             except ValueError as e:
