@@ -77,7 +77,7 @@ if __name__ == "__main__":
         base_url=robob_credential.data["workforce_planner_url"],
         username=robob_credential.username,
         password=robob_credential.password,
-        headless=False
+        headless=True
     )
 
     tracker = Tracker(
